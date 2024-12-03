@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+$color-yellow : hsl(47, 88%, 63%);
+$color-white: hsl(0, 0%, 100%);
+$color-gray-500: hsl(0, 0%, 42%);
+$color-gray-950: hsl(0, 0%, 7%);
+
+
+$font-size: 16px;
+$font-family: 'Figtree';
+$weight-500: 500;
+$weight-800: 800;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+body{
+    font-family: $font-family;
+    width: 100%;
+    height: 100vh;
+}
+
+ol,
+ul,
+li{
+    list-style: none;
+}
+
+input,
+textarea,
+button{
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    border: none;
+}
+
+h1,
+h2{
+    color: $color-gray-950;
+    line-height: 150%;
+    margin-top: 12px;
+}
+
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: $color-yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 384px;
+    height: auto;
+    border: 1px solid $color-gray-950;
+    border-radius: 20px;
+    box-shadow: 8px 8px 0 0 #000000;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background: $color-white;
+    &-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        & > h2{
+            font-weight: $weight-500;
+            font-size: 14px;
+        }
+        & > h1{
+            font-size: 24px;
+            font-weight: $weight-800;
+        }
+
+    }
+    &-footer{
+        width: 129px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            & > img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        &-name{
+            font-size: 14px;
+            font-weight: $weight-800;
+            line-height: 150%;
+            color: $color-gray-950
+        }
+    }
+}
+
+.image{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+.strong-text{
+    padding: 4px 12px;
+    width: 84px;
+    background: $color-yellow;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: $weight-800;
+    line-height: 150%;
+    color: $color-gray-950
+}
+
+
+.regular-text{
+    font-weight: $weight-500;
+    line-height: 150%;
+    font-size: $font-size;
+    color: $color-gray-500;
+     margin-top: 12px;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (max-width: 460px){
+    .card{
+        width: 327px;
+    }
+}
